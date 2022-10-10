@@ -1,7 +1,9 @@
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render, get_object_or_404
+from django.views.generic import CreateView
 
 from app.models import Post
+from app.templates.app.forms import PostForm
 
 
 def index(request: HttpRequest) -> HttpResponse:
@@ -26,5 +28,11 @@ def post_detail(request: HttpRequest, pk: int) -> HttpResponse:
         },
     )
 
+
+post_new = CreateView.as_view(
+    model=Post,
+    form_class=PostForm,
+    success_url="/app/",  # 저장하고 나서 이동할 주소 지정
+)
 
 # Create your views here.
