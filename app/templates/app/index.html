@@ -4,7 +4,7 @@
     {%  for post in post_list %}
         <div>
         {# TODO: url reverse 기능을 쓰도록 수정이 되어야 한다 #}
-            <a href="/app{{ post.id }}/">
+            <a href="/app/{{ post.id }}/">
             {{  post.id }}. {{  post.title }}
             </a>
         </div>
