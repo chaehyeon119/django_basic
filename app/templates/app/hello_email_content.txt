@@ -1,0 +1,4 @@
+{{ evnet_name[deault:"무명" }} 이벤트에 초대합니다. #템플릿 내에서 참조할 수 있는 값을 context data
+# event_name이라는 context data가 있으면 쓰고 없으면 대신 "무명"이라는 문자열을 쓰겠다
+
+이메일 내용입니다.
