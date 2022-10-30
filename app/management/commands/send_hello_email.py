@@ -9,7 +9,7 @@ from django.template.loader import render_to_string
 
 class Command(BaseCommand):
     def add_arguments(self, parser):
-        parser.add_argument("receiver", nargs="+", type=str, help=">dz!®–|!õ—")
+        parser.add_argument("receiver", nargs="+", type=str, help="이메일 수신자 주소")
 
     def handle(self, *args, **options):
         subject = render_to_string("app/hello_email_subject.txt")
